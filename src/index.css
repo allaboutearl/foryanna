@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Nunito', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    letter-spacing: -0.005em;
+  }
+}
+
+.font-cute {
+  font-family: 'Nunito', 'Quicksand', 'Plus Jakarta Sans', -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.font-hand {
+  font-family: 'Mali', 'Nunito', -apple-system, sans-serif;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+/* Custom animations for cute Chiikawa/Usagi vibe */
+@keyframes usagi-wiggle {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(-3deg) translateY(-4px);
+  }
+  75% {
+    transform: rotate(3deg) translateY(-2px);
+  }
+}
+
+@keyframes ear-twitch {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-6deg);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes sparkle-twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15) rotate(15deg);
+  }
+}
+
+@keyframes heart-float {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-90px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate-usagi-wiggle {
+  animation: usagi-wiggle 3s ease-in-out infinite;
+}
+
+.animate-ear-twitch {
+  animation: ear-twitch 2.5s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle-twinkle 2s ease-in-out infinite;
+}
+
+/* Washi tape effect */
+.washi-tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 90px;
+  height: 22px;
+  background-color: rgba(254, 215, 226, 0.85);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  border-left: 2px dashed rgba(244, 114, 182, 0.4);
+  border-right: 2px dashed rgba(244, 114, 182, 0.4);
+  z-index: 10;
+}
+
+/* Smooth mobile scrolling */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translateY(-20px) rotate(0deg) translateX(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(50vh) rotate(180deg) translateX(25px);
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(105vh) rotate(360deg) translateX(-20px);
+    opacity: 0;
+  }
+}
+
+@keyframes flower-sway {
+  0%, 100% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+}
+.animate-flower-sway {
+  animation: flower-sway 3.4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes cloud-drift {
+  0% {
+    transform: translateX(-12px);
+  }
+  50% {
+    transform: translateX(12px);
+  }
+  100% {
+    transform: translateX(-12px);
+  }
+}
+.animate-cloud-drift {
+  animation: cloud-drift 9s ease-in-out infinite;
+}
+
+@keyframes heart-float-up {
+  0% {
+    transform: translateY(0) scale(0.75) rotate(-4deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-140px) scale(1.15) rotate(6deg);
+    opacity: 0;
+  }
+}
+.animate-heart-float-up {
+  animation: heart-float-up 7s ease-in-out infinite;
+}
+
+@keyframes particle-twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.6) translateY(0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.15) translateY(-6px);
+  }
+}
+.animate-particle-twinkle {
+  animation: particle-twinkle 3.5s ease-in-out infinite;
+}
+
+@keyframes button-glow-pulse {
+  0%, 100% {
+    box-shadow: 0 10px 25px -4px rgba(244, 114, 182, 0.4), 0 0 16px rgba(251, 207, 232, 0.6);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 14px 30px -2px rgba(244, 114, 182, 0.65), 0 0 26px rgba(251, 207, 232, 0.95);
+    transform: scale(1.02);
+  }
+}
+.animate-button-glow {
+  animation: button-glow-pulse 2.8s ease-in-out infinite;
+}

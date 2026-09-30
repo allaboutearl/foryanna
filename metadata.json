@@ -1,0 +1,6 @@
+{
+  "name": "Girlfriend Day Surprise ♡",
+  "description": "A cute Usagi-inspired mobile story and surprise for Girlfriend Day on October 1st.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
